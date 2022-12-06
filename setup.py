@@ -12,7 +12,7 @@ setup(
     py_modules=["tap_shopify"],
     install_requires=[
         "ShopifyAPI==10.0.0",
-        "singer-python==5.12.1",
+        "singer-python @ git+https://github.com/peliqan-io/singer-python@master",
     ],
     extras_require={
         'dev': [
