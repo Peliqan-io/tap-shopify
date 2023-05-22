@@ -163,26 +163,29 @@ def sync():
 
         LOGGER.info('Syncing stream: %s', stream_id)
 
-        if not Context.state.get('bookmarks'):
-            Context.state['bookmarks'] = {}
-        Context.state['bookmarks']['currently_sync_stream'] = stream_id
+        try:
+            if not Context.state.get('bookmarks'):
+                Context.state['bookmarks'] = {}
+            Context.state['bookmarks']['currently_sync_stream'] = stream_id
+            # some fields have epoch-time as date, hence transform into UTC date
+            with Transformer(singer.UNIX_SECONDS_INTEGER_DATETIME_PARSING) as transformer:
+                for rec in stream.sync():
+                    extraction_time = singer.utils.now()
+                    record_schema = catalog_entry['schema']
+                    record_metadata = metadata.to_map(catalog_entry['metadata'])
+                    rec = transformer.transform({**rec, **sdc_fields},
+                                                record_schema,
+                                                record_metadata)
+                    singer.write_record(stream_id,
+                                        rec,
+                                        time_extracted=extraction_time)
+                    Context.counts[stream_id] += 1
 
-        # some fields have epoch-time as date, hence transform into UTC date
-        with Transformer(singer.UNIX_SECONDS_INTEGER_DATETIME_PARSING) as transformer:
-            for rec in stream.sync():
-                extraction_time = singer.utils.now()
-                record_schema = catalog_entry['schema']
-                record_metadata = metadata.to_map(catalog_entry['metadata'])
-                rec = transformer.transform({**rec, **sdc_fields},
-                                            record_schema,
-                                            record_metadata)
-                singer.write_record(stream_id,
-                                    rec,
-                                    time_extracted=extraction_time)
-                Context.counts[stream_id] += 1
+            Context.state['bookmarks'].pop('currently_sync_stream')
+            singer.write_state(Context.state)
+        except:
+            LOGGER.info('Skipping stream: %s. An error occured', stream_id)
 
-        Context.state['bookmarks'].pop('currently_sync_stream')
-        singer.write_state(Context.state)
 
     LOGGER.info('----------------------')
     for stream_id, stream_count in Context.counts.items():

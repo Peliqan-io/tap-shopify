@@ -285,8 +285,5 @@ class Stream():
         If the get_objects() function throws an error (due to access permission,...)
         return immediately to skip stream
         """
-        try:
-            for obj in self.get_objects():
-                yield obj.to_dict()
-        except:
-            return
+        for obj in self.get_objects():
+            yield obj.to_dict()
