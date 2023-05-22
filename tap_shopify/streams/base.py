@@ -281,6 +281,12 @@ class Stream():
 
         This is the default implementation. Get's all of self's objects
         and calls to_dict on them with no further processing.
+
+        If the get_objects() function throws an error (due to access permission,...)
+        return immediately to skip stream
         """
-        for obj in self.get_objects():
-            yield obj.to_dict()
+        try:
+            for obj in self.get_objects():
+                yield obj.to_dict()
+        except:
+            return
