@@ -183,7 +183,8 @@ def sync():
 
             Context.state['bookmarks'].pop('currently_sync_stream')
             singer.write_state(Context.state)
-        except:
+        except Exception as e:
+            LOGGER.info(e)
             LOGGER.info('Skipping stream: %s. An error occured', stream_id)
 
 
