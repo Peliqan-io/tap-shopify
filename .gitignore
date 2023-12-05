@@ -102,3 +102,7 @@ rsa-key
 tags
 singer-check-tap-data
 state.json
+*.jsonl
+catalog*.json
+update_catalog.py
+.vscode
