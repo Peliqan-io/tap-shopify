@@ -96,5 +96,8 @@ class AllFieldsTest(BaseTapTest):
                     # No field named 'order_adjustments' present in the 'order' object
                     #   Documentation: https://shopify.dev/api/admin-rest/2021-10/resources/order#resource_object
                     expected_all_keys.remove('order_adjustments')
-
+                    # missing data for 'taxExempt' and 'poNumber' in 'orders' stream
+                    # https://jira.talendforge.org/browse/TDL-25173
+                    missing_fields = {'taxExempt', 'poNumber'}
+                    expected_all_keys = expected_all_keys - missing_fields
                 self.assertSetEqual(expected_all_keys, actual_all_keys)
