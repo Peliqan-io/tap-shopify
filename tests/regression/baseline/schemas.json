@@ -1,0 +1,621 @@
+{
+  "custom_collections": {
+    "properties": {
+      "_sdc_shop_id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "_sdc_shop_myshopify_domain": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "_sdc_shop_name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "admin_graphql_api_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "body_html": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "handle": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "image": {
+        "properties": {
+          "alt": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_at": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "height": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "src": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "width": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "published_at": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "published_scope": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "sort_order": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "template_suffix": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "title": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "updated_at": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  },
+  "products": {
+    "properties": {
+      "_sdc_shop_id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "_sdc_shop_myshopify_domain": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "_sdc_shop_name": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "admin_graphql_api_id": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "body_html": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "handle": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "image": {
+        "properties": {
+          "admin_graphql_api_id": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "alt": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "created_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "height": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "position": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "src": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "updated_at": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "variant_ids": {
+            "items": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "type": [
+              "null",
+              "array"
+            ]
+          },
+          "width": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "images": {
+        "items": {
+          "properties": {
+            "admin_graphql_api_id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "alt": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "height": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "position": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "src": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "variant_ids": {
+              "items": {
+                "type": [
+                  "null",
+                  "integer"
+                ]
+              },
+              "type": [
+                "null",
+                "array"
+              ]
+            },
+            "width": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            }
+          },
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        "type": [
+          "null",
+          "array"
+        ]
+      },
+      "options": {
+        "items": {
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "position": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "product_id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "values": {
+              "items": {
+                "type": [
+                  "null",
+                  "string"
+                ]
+              },
+              "type": [
+                "null",
+                "array"
+              ]
+            }
+          },
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        "type": [
+          "null",
+          "array"
+        ]
+      },
+      "product_type": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "published_at": {
+        "format": "date-time",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "published_scope": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "status": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "tags": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "template_suffix": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "title": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "updated_at": {
+        "format": "date-time",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "variants": {
+        "items": {
+          "properties": {
+            "admin_graphql_api_id": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "barcode": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "compare_at_price": {
+              "format": "singer.decimal",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "created_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "fulfillment_service": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "grams": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "image_id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "inventory_item_id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "inventory_management": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "inventory_policy": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "inventory_quantity": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "old_inventory_quantity": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "option1": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "option2": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "option3": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "position": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "price": {
+              "format": "singer.decimal",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "product_id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "requires_shipping": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "sku": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "tax_code": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "taxable": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "title": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "updated_at": {
+              "format": "date-time",
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "weight": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "weight_unit": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "type": [
+            "null",
+            "object"
+          ]
+        },
+        "type": [
+          "null",
+          "array"
+        ]
+      },
+      "vendor": {
+        "type": [
+          "null",
+          "string"
+        ]
+      }
+    },
+    "type": "object"
+  }
+}
