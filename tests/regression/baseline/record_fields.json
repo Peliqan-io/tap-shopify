@@ -1,0 +1,40 @@
+{
+  "custom_collections": [
+    "_sdc_shop_id",
+    "_sdc_shop_myshopify_domain",
+    "_sdc_shop_name",
+    "admin_graphql_api_id",
+    "body_html",
+    "handle",
+    "id",
+    "published_at",
+    "published_scope",
+    "sort_order",
+    "template_suffix",
+    "title",
+    "updated_at"
+  ],
+  "products": [
+    "_sdc_shop_id",
+    "_sdc_shop_myshopify_domain",
+    "_sdc_shop_name",
+    "admin_graphql_api_id",
+    "body_html",
+    "created_at",
+    "handle",
+    "id",
+    "image",
+    "images",
+    "options",
+    "product_type",
+    "published_at",
+    "published_scope",
+    "status",
+    "tags",
+    "template_suffix",
+    "title",
+    "updated_at",
+    "variants",
+    "vendor"
+  ]
+}
